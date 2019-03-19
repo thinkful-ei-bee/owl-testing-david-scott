@@ -4,6 +4,7 @@ import STORE from './STORE.js';
 import Stage from './components/Stage';
 import Bottom from './components/Bottom';
 import Top from './components/Top';
+import Chat from './components/Chat';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
   return (
     <main className='App'>
       <Top numActive={numActive}></Top>
+      <Chat chatEvents={STORE.chatEvents} participants={STORE.participants}></Chat>
       <Stage usersOnStage={usersOnStage} localUser={localUser}></Stage>
       <Bottom onStage={localUserObj.onStage}></Bottom>
     </main>
