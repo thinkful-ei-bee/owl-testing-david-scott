@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Chat from './Chat';
 
-it('renders without crashing', () => {
+
+describe('<Chat />', () => {
+  it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Chat />, div);
   ReactDOM.unmountComponentAtNode(div);
+  });
 });
+

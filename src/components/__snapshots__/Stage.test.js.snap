@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stage /> matches previous snapshot 1`] = `
+<div
+  className="stageContainer"
+>
+  <section
+    className="stageArea"
+  >
+    <div
+      className="userCard"
+    >
+      <h2>
+        Caty Flucker
+      </h2>
+      <img
+        alt="Caty Flucker"
+        src="https://robohash.org/doloredolorescupiditate.jpg?size=200x200&set=set1"
+      />
+    </div>
+  </section>
+  <div
+    className="localUserArea"
+  >
+    <img
+      alt="local user"
+      src="https://robohash.org/itaquevoluptatumrerum.jpg?size=200x200&set=set1"
+    />
+  </div>
+</div>
+`;

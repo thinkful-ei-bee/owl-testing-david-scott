@@ -2,7 +2,7 @@ export default {
 
   view: 'Chat',
 
-  localUser: 1,
+  localUser: 2,
 
  participants: [
     {
@@ -26,7 +26,7 @@ export default {
         name: 'Axe Kubicka',
         avatar: 'https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1',
         inSession: false,
-        onStage: false
+        onStage: true
     },
     {
         id: 4,

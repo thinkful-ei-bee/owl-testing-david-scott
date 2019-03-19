@@ -1,24 +1,27 @@
 import React from 'react';
 import './Stage.css';
-import STORE from '../STORE.js';
+
+// props for stage
+// this.props.usersOnStage , array of user objects
+// this.props.localUser, id of local user
 
 class Stage extends React.Component {
   render() {
 
-    const usersOnStage = STORE.participants.filter(obj => obj.onStage);
-
-    const nonLocalUsers = usersOnStage.filter(obj => obj.id !== STORE.localUser);
+    const usersOnStage = this.props.usersOnStage;
+    const localUser = this.props.localUser;
+    const nonLocalUsers = usersOnStage.filter(obj => obj.id !== localUser);
 
     let localUserJsx = '';
 
     if (usersOnStage.length !== nonLocalUsers.length) {
-      const localUserAvatarSrc = STORE.participants.filter(obj => obj.id === STORE.localUser)[0]
+      const localUserAvatarSrc = usersOnStage.filter(obj => obj.id === localUser)[0]
         .avatar;
       localUserJsx = <img src={localUserAvatarSrc} alt='local user' />;
     }
 
     let nonLocalUserJsx = nonLocalUsers.map((user) =>
-      <div className='userCard'>
+      <div key={user.id} className='userCard'>
         <h2>{user.name}</h2>
         <img src={user.avatar} alt={user.name} />
       </div>

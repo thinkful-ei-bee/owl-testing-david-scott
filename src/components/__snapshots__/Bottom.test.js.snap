@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bottom /> matches previous snapshot 1`] = `
+<footer>
+  <img
+    alt="media buttons"
+    src="mediaIcons.png"
+  />
+  <img
+    alt="reactions"
+    src="Reactions.png"
+  />
+  <button
+    className="joinButton"
+  >
+    Join Stage
+  </button>
+</footer>
+`;
