@@ -2,7 +2,7 @@ export default {
 
   view: 'Chat',
 
-  localUser: 2,
+  localUser: 1,
 
  participants: [
     {
