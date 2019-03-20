@@ -4,7 +4,7 @@ export default {
 
   localUser: 1,
 
- participants: [
+  participants: [
     {
         id: 1,
         name: 'Koren Templeton',
@@ -46,8 +46,8 @@ export default {
     }
 ],
 
-chatEvents: [
-  {
+  chatEvents: [
+     {
       participantId: 3,
       type: 'message',
       message: 'Hello world',

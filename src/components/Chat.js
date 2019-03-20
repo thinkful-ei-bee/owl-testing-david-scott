@@ -1,32 +1,43 @@
 import React from 'react';
 import './Chat.css';
 
-
-
 class Chat extends React.Component {
   render() {
-    
-    const chatEvents = this.props.chatEvents;
     const participants = this.props.participants;
-
-    const chatTextBoxes = chatEvents.map(event => {
-      switch(event.type) {
+    const chatEvents = this.props.chatEvents;
+    const chatTextBoxes = chatEvents.map((evt, i) => {
+      const speaker = participants.find(ele => ele.id === evt.participantId);
+      switch(evt.type) {
         case 'message' :
-          const speaker = participants.find(ele => ele.id === event.participantId);
           return (
-           <div classname="chatEvent">
+            <div className="chatEvent" key={i}>
               <img src={speaker.avatar} alt={speaker.name} />
               <span>{speaker.name}</span>
-              <p>{event.message}</p>
+              <p>{evt.message}</p>
             </div>
           );
-          default :
-           return <span>abc</span>;
+        case 'thumbs-up' :
+          return (
+            <div className="chatEvent" key={i}>
+              <p>{speaker.name} gave a thumbs up</p>
+            </div>
+          );
+        case 'thumbs-down' :
+          return (
+            <div>
+              <p>{speaker.name} gave a thumbs down</p>
+            </div>
+          );
+        default :
+          return 6;
       }
     });
-
-    return chatTextBoxes;
+  
+    return (
+    <div>{chatTextBoxes}</div>
+    );
   }
 }
 
 export default Chat;
+

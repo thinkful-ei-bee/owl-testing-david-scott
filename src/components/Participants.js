@@ -3,7 +3,7 @@ import './Participants.css';
 
 class Participants extends React.Component {
   render() {
-    return;
+    return <div />;
   }
 }
 

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Chat /> matches previous snapshot 1`] = `
+<div>
+  <div
+    className="chatEvent"
+  >
+    <img
+      alt="Axe Kubicka"
+      src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
+    />
+    <p>
+      Axe Kubicka
+    </p>
+    <p>
+      Hello world
+    </p>
+  </div>
+</div>
+`;
