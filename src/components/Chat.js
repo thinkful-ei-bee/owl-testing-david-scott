@@ -3,12 +3,21 @@ import './Chat.css';
 
 class Chat extends React.Component {
   render() {
+    const eventMapping = {
+      'thumbs-up': 'gave a thumbs up',
+      'thumbs-down': 'gave a thumbs down',
+      'clap': 'clapped',
+      'raise-hand': 'raised their hand',
+      'join': 'joined', 
+      'leave': 'left',
+      'join-stage': 'joined the stage',
+      'leave-stage': 'left the stage'
+    }
     const participants = this.props.participants;
     const chatEvents = this.props.chatEvents;
     const chatTextBoxes = chatEvents.map((evt, i) => {
       const speaker = participants.find(ele => ele.id === evt.participantId);
-      switch(evt.type) {
-        case 'message' :
+      if(evt.type === 'message') {
           return (
             <div className="chatEvent" key={i}>
               <img src={speaker.avatar} alt={speaker.name} />
@@ -16,25 +25,21 @@ class Chat extends React.Component {
               <p>{evt.message}</p>
             </div>
           );
-        case 'thumbs-up' :
-          return (
-            <div className="chatEvent" key={i}>
-              <p>{speaker.name} gave a thumbs up</p>
-            </div>
-          );
-        case 'thumbs-down' :
-          return (
-            <div>
-              <p>{speaker.name} gave a thumbs down</p>
-            </div>
-          );
-        default :
-          return 6;
-      }
+      } else {
+        return (
+          <div className="chatEvent" key={i}>
+              <p>{speaker.name} {eventMapping[evt.type]}</p>
+          </div>
+        );
+      } 
+       
     });
   
     return (
-    <div>{chatTextBoxes}</div>
+    <div>
+      <div className="allMessages">{chatTextBoxes}</div>
+      <input type="text" placeholder="Chat"></input>
+    </div>
     );
   }
 }

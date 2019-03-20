@@ -3,18 +3,26 @@
 exports[`<Chat /> matches previous snapshot 1`] = `
 <div>
   <div
-    className="chatEvent"
+    className="allMessages"
   >
-    <img
-      alt="Axe Kubicka"
-      src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
-    />
-    <p>
-      Axe Kubicka
-    </p>
-    <p>
-      Hello world
-    </p>
+    <div
+      className="chatEvent"
+    >
+      <img
+        alt="Axe Kubicka"
+        src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
+      />
+      <span>
+        Axe Kubicka
+      </span>
+      <p>
+        Hello world
+      </p>
+    </div>
   </div>
+  <input
+    placeholder="Chat"
+    type="text"
+  />
 </div>
 `;

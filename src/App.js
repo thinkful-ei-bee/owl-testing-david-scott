@@ -5,6 +5,7 @@ import Stage from './components/Stage';
 import Bottom from './components/Bottom';
 import Top from './components/Top';
 import Chat from './components/Chat';
+import Participants from './components/Participants';
 
 function App() {
   
@@ -13,11 +14,12 @@ function App() {
   const localUserObj = STORE.participants.filter(obj => obj.id === localUser)[0];
   const numActive = STORE.participants.filter(obj => obj.inSession).length;
 
+  const viewDiv = STORE.view === 'Chat' ? <Chat chatEvents={STORE.chatEvents} participants={STORE.participants}></Chat> : <Participants participants={STORE.participants}></Participants>;
 
   return (
     <main className='App'>
       <Top numActive={numActive}></Top>
-      <Chat chatEvents={STORE.chatEvents} participants={STORE.participants}></Chat>
+      {viewDiv}
       <Stage usersOnStage={usersOnStage} localUser={localUser}></Stage>
       <Bottom onStage={localUserObj.onStage}></Bottom>
     </main>
