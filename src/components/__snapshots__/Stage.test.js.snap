@@ -22,10 +22,14 @@ exports[`<Stage /> matches previous snapshot 1`] = `
   <div
     className="localUserArea"
   >
-    <img
-      alt="local user"
-      src="https://robohash.org/itaquevoluptatumrerum.jpg?size=200x200&set=set1"
-    />
+    <div
+      className="localUserBox"
+    >
+      <img
+        alt="local user"
+        src="https://robohash.org/itaquevoluptatumrerum.jpg?size=200x200&set=set1"
+      />
+    </div>
   </div>
 </div>
 `;

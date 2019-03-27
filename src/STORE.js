@@ -1,6 +1,6 @@
 export default {
 
-  view: 'Chat',
+  view: 'Participants',
 
   localUser: 1,
 
@@ -25,7 +25,7 @@ export default {
         id: 3,
         name: 'Axe Kubicka',
         avatar: 'https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1',
-        inSession: false,
+        inSession: true,
         onStage: true
     },
     {
@@ -33,7 +33,7 @@ export default {
         name: 'Frank Runciman',
         avatar:
             'https://robohash.org/etexercitationemassumenda.jpg?size=200x200&set=set1',
-        inSession: true,
+        inSession: false,
         onStage: false
     },
     {

@@ -1,3 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Participants /> matches previous snapshot 1`] = `null`;
+exports[`<Participants /> matches previous snapshot 1`] = `
+<div
+  className="sideBarContainer"
+>
+  <div
+    className="sideBar"
+  >
+    <div
+      className="allMessages"
+    >
+      <div
+        className="participantCard"
+      >
+        <img
+          alt="Koren Templeton"
+          src="https://robohash.org/itaquevoluptatumrerum.jpg?size=200x200&set=set1"
+        />
+        <strong>
+          Koren Templeton
+           
+        </strong>
+        <p
+          className="indented"
+        >
+          <span
+            className="dot"
+          />
+          on stage
+        </p>
+      </div>
+      <div
+        className="participantCard"
+      >
+        <img
+          alt="Axe Kubicka"
+          src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
+        />
+        <strong>
+          Axe Kubicka
+           
+        </strong>
+        <p
+          className="indented"
+        >
+          <span
+            className="dot greydot"
+          />
+          on stage
+        </p>
+      </div>
+      <div
+        className="participantCard"
+      >
+        <img
+          alt="Caty Flucker"
+          src="https://robohash.org/doloredolorescupiditate.jpg?size=200x200&set=set1"
+        />
+        <strong>
+          Caty Flucker
+           
+        </strong>
+        <p
+          className="indented"
+        >
+          <span
+            className="dot"
+          />
+          in session
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

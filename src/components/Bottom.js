@@ -15,8 +15,10 @@ class Bottom extends React.Component {
     return (
     <footer>
       <img src={reactions} alt="reactions" />
+      <div className="right">
       <img src={icons} alt="media buttons" />
       {stageButton}
+      </div>
     </footer>
     );
   }

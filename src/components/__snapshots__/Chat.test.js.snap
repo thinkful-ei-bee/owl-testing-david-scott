@@ -1,23 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Chat /> matches previous snapshot 1`] = `
-<div>
+<div
+  className="sideBarContainer"
+>
   <div
-    className="allMessages"
+    className="sideBar"
   >
     <div
-      className="chatEvent"
+      className="allMessages"
     >
-      <img
-        alt="Axe Kubicka"
-        src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
-      />
-      <span>
-        Axe Kubicka
-      </span>
-      <p>
-        Hello world
-      </p>
+      <div
+        className="chatEvent timeStamped"
+      >
+        <img
+          alt="Axe Kubicka"
+          src="https://robohash.org/utlaborumfugit.jpg?size=200x200&set=set1"
+        />
+        <strong>
+          Axe Kubicka
+           
+        </strong>
+        <span>
+           
+          4:48 AM
+        </span>
+        <p
+          class="indented"
+        >
+          Hello world
+        </p>
+      </div>
     </div>
   </div>
   <input

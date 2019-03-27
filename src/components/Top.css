@@ -2,3 +2,14 @@ header div{
   display: inline-block;
   padding: 15px;
 }
+
+header img {
+  height: 50px;
+  position: absolute;
+  width: 103px;
+  top: 20px;
+}
+
+.underlined {
+  text-decoration: underline;
+}

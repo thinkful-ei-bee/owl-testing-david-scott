@@ -18,17 +18,24 @@ class Chat extends React.Component {
     const chatTextBoxes = chatEvents.map((evt, i) => {
       const speaker = participants.find(ele => ele.id === evt.participantId);
       if(evt.type === 'message') {
+          const messageTime = new Date(evt.timestamp);
+          const convertedTime = messageTime.toLocaleString('en-US', {
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+          })
           return (
-            <div className="chatEvent" key={i}>
+            <div className="chatEvent timeStamped" key={i}>
               <img src={speaker.avatar} alt={speaker.name} />
-              <span>{speaker.name}</span>
-              <p>{evt.message}</p>
+              <strong>{speaker.name} </strong>
+              <span> {convertedTime}</span>
+              <p class="indented">{evt.message}</p>
             </div>
           );
       } else {
         return (
           <div className="chatEvent" key={i}>
-              <p>{speaker.name} {eventMapping[evt.type]}</p>
+              <p><strong>{speaker.name}</strong> {eventMapping[evt.type]}</p>
           </div>
         );
       } 
@@ -36,10 +43,12 @@ class Chat extends React.Component {
     });
   
     return (
-    <div>
-      <div className="allMessages">{chatTextBoxes}</div>
-      <input type="text" placeholder="Chat"></input>
-    </div>
+      <div className="sideBarContainer">
+         <div className="sideBar">
+            <div className="allMessages">{chatTextBoxes}</div>
+        </div>
+        <input type="text" placeholder="Chat"></input>
+      </div>
     );
   }
 }

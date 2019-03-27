@@ -1,0 +1,38 @@
+.chatEvent {
+  color: grey;
+  text-align: center;
+}
+
+.chatEvent img {
+  border-radius: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.sideBar {
+  float: left;
+  min-height: 600px;
+  width: 300px;
+  overflow: scroll;
+}
+
+.timeStamped {
+  text-align: left;
+}
+
+.indented {
+  color: black;
+  text-indent: 25px;
+}
+
+.sideBarContainer {
+  width: 300px;
+}
+
+input {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 40px;
+  width: 90%;
+}

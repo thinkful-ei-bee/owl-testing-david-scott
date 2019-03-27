@@ -1,0 +1,32 @@
+
+.participantCard img {
+  border-radius: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.sideBar {
+  float: left;
+  min-height: 600px;
+  width: 300px;
+  overflow: scroll;
+}
+
+.indented {
+  color: black;
+  text-indent: 25px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(26, 224, 26);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.greydot {
+  background-color: grey;
+}

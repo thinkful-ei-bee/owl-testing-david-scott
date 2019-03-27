@@ -17,7 +17,7 @@ class Stage extends React.Component {
     if (usersOnStage.length !== nonLocalUsers.length) {
       const localUserAvatarSrc = usersOnStage.filter(obj => obj.id === localUser)[0]
         .avatar;
-      localUserJsx = <img src={localUserAvatarSrc} alt='local user' />;
+      localUserJsx = <div className="localUserBox"><img src={localUserAvatarSrc} alt='local user' /></div>;
     }
 
     let nonLocalUserJsx = nonLocalUsers.map((user) =>

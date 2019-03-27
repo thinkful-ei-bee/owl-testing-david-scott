@@ -1,0 +1,43 @@
+.userCard {
+  display: inline-block;
+  padding: 20px;
+}
+
+.userCard img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.stageContainer {
+  background-color: rgb(60, 60, 60);
+  float: right;
+  clear: left;
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+}
+
+.stageArea {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+
+.localUserBox {
+  background-color: black;
+  width: 100px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+}
+
+.localUserBox img {
+  border-radius: 50%;
+  display: block;
+  height: 50px;
+  width: 50px;
+  margin: auto; 
+}

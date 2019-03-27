@@ -6,14 +6,18 @@ exports[`<Bottom /> matches previous snapshot 1`] = `
     alt="reactions"
     src="Reactions.png"
   />
-  <img
-    alt="media buttons"
-    src="mediaIcons.png"
-  />
-  <button
-    className="joinButton"
+  <div
+    className="right"
   >
-    Join Stage
-  </button>
+    <img
+      alt="media buttons"
+      src="mediaIcons.png"
+    />
+    <button
+      className="joinButton"
+    >
+      Join Stage
+    </button>
+  </div>
 </footer>
 `;
